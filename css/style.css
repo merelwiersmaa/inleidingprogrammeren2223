@@ -1,3 +1,122 @@
+/****************************************************************
+ALGEMEEN
+*****************************************************************/
+
+
+/* hieronder zijn de variabelen aangemaakt met bijbehorende kleurencodes, zodat je bij meerdere elementen alleen de variable
+hoeft te noemen, en dan haalt hij de gegeven kleur van de variable naar voren. Als er dus een bepaalde aanpassing komt aan de huisstijl
+van de website, kan je dus in één keer alle knoppen (bijvoorbeeld) een ander kleur geven, door de variabele aan te passen
+dit scheelt dus werk en is overzichtelijker */
+:root {
+    --backgroundcolorNav: rgb(227, 84, 193);
+    --backgroundcolorMain: rgb(244, 218, 246);
+    --textcolorAtjes: rgb(0, 0, 0);
+    --textcolorNavjes: rgb(3, 3, 3);
+    --textcolorZwart: rgb(0, 0, 0);
+}
+*, html {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-color: hotpink;
+      color: var(--textcolorZwart); 
+}
+
+main {
+    background-color: var(--backgroundcolorMain);
+    padding-top: 5em;
+}
+
+h1 {
+    font-size: 5em;
+    padding: .5em;
+}
+
+p {
+    font-size: 2em;
+
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    list-style: none;
+    text-decoration: none;
+    color: var(--textcolorAtjes);
+}
+
+li {
+    list-style: none;
+}
+
+
+
+
+
+/****************************************************************
+HEADER
+*****************************************************************/
+header {
+    background-color: var(--backgroundcolorNav);
+    /* de positie van de header is fixed, dat betekent dat hij altijd blijft staan zodra er gescrolld wordt */
+    position:fixed;
+    width: 100%;
+    z-index:100;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    padding: 1.5em;
+}
+nav > ul {
+    background-color: var(--backgroundcolorNav);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    padding-left: 2em;
+    padding-top:2em;
+    font-size: 3em;
+    
+
+    /* zorgt ervoor dar de navigatie niet in beeld is */  
+    transform: translateX(-100%); 
+}
+
+.hamburger {
+
+    /* hieronder zorgt ervoor dat de button boven de content steekt */
+    position:relative;
+    z-index: 200;
+    background-color: transparent;
+}
+
+nav.toonMenu ul {
+    /* dit wordt gebruikt bij de functie toonMenu in javascript,
+    het zorgt ervoor dat de navigatie in beeld schuift  
+    
+    Voor de perfecte 'halve pagina menu voor de customizer: -65% !! */
+    transform: translateX(-0%);
+    transition: .4s;
+}
+
+
+/****************************************************************
+EERSTE SECTIE
+*****************************************************************/
+
+section > h2 {
+    padding-top: 2em;
+    font-size: 4em;
+}
+
+nav > ul > li > button {
+    background: transparent;
 }
