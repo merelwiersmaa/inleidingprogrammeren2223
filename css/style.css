@@ -21,10 +21,10 @@ dit scheelt dus werk en is overzichtelijker */
 
 body {
       color: var(--textcolorZwart); 
+      background-color: var(--backgroundcolorMain);
 }
 
 main {
-    background-color: var(--backgroundcolorMain);
     padding-top: 5em;
 }
 
@@ -74,6 +74,7 @@ nav {
     justify-content:space-between;
     padding: 1.5em;
 }
+
 nav > ul {
     background-color: var(--backgroundcolorNav);
     position: fixed;
@@ -121,13 +122,27 @@ nav.toonMenu ul {
 EERSTE SECTIE
 *****************************************************************/
 
-section > h1 {
+section {
+    padding-top: 8em;
     display: flex;
+    align-items: center;
     justify-content: center;
-    padding-top: 1.5em;
+    flex-direction: column;
+}
+    
+
+h1 {
+    
     font-size: 4em;
 }
 
+
+h1:hover {
+    font-size: 5em;
+    transform:scale(1.5);
+    transition-duration: .3s;
+    
+}
 nav > ul > li > button {
     background: transparent;
 }
