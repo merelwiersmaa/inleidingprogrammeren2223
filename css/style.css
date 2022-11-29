@@ -81,13 +81,17 @@ nav > ul {
     bottom: 0;
     right: 0;
     top: 0;
-    padding-left: 2em;
-    padding-top:2em;
+    padding-left: 24em;
+    padding-top:3em;
     font-size: 3em;
     
 
     /* zorgt ervoor dar de navigatie niet in beeld is */  
     transform: translateX(-100%); 
+}
+
+.categorieKleur {
+    font-size: .5em;
 }
 
 .hamburger {
@@ -103,17 +107,24 @@ nav.toonMenu ul {
     het zorgt ervoor dat de navigatie in beeld schuift  
     
     Voor de perfecte 'halve pagina menu voor de customizer: -65% !! */
-    transform: translateX(-0%);
+    transform: translateX(-80%);
     transition: .4s;
 }
 
+.knopRandom {
+    background-color: var(--backgroundcolorMain);
+    border-radius: 60%;
+    padding: 3em;
+}
 
 /****************************************************************
 EERSTE SECTIE
 *****************************************************************/
 
-section > h2 {
-    padding-top: 2em;
+section > h1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5em;
     font-size: 4em;
 }
 
