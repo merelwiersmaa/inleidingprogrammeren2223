@@ -130,18 +130,18 @@ section {
     flex-direction: column;
 }
     
-
+/* ik wil dat de hover van de H1 BOVEN de content uitsteekt, dus niet dat alles verschuift 
+tijdens het hoveren */
 h1 {
-    
     font-size: 4em;
 }
 
 
 h1:hover {
+    overflow:visible;
     font-size: 5em;
     transform:scale(1.5);
     transition-duration: .3s;
-    
 }
 nav > ul > li > button {
     background: transparent;
