@@ -103,7 +103,7 @@ nav.toonMenu ul {
     het zorgt ervoor dat de navigatie in beeld schuift  
     
     Voor de perfecte 'halve pagina menu voor de customizer: -65% !! */
-    transform: translateX(-65%);
+    transform: translateX(-0%);
     transition: .4s;
 }
 

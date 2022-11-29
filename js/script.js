@@ -13,13 +13,28 @@ function toggleMenu(event) {
 }
 button.addEventListener("click", toggleMenu);
 
+//variable voor de button die de functie activeerd
+var knopRandom = document.querySelector(".knopRandom")
 
-// hieronder heb ik variabelen aangemaakt ter betrekking tot de kleurkeuze-sectie
+//hieronder de variabele voor de naam van het paard (de H1)
+var randomPaardNaam = document.querySelector(".headingPaardNaam")
 
+//hieronder de keuzes waaruit de randomfunctie kan kiezen
+var randomNamen = ["Johny","Johnson","Jonathan","Johnsontje","John","Joey","Rowan"]
 
-var heading = document.querySelector(".heading"); // de h1(kleur)
+//hieronder is de fucntie gemaakt die ervoor zorgt dat de H1 gemanipuleert wordt met random namen
+// en in de console.log wordt de hoeveelheid (length) van namen in de array getoond
+function toonRandomPaardNaam() {
+    var randomNaam = Math.random()* randomNamen.length ;
+console.log("namen",randomNamen.length)
 
-var kleurkeuze = document.querySelector(".kleurkeuze"); // de image van de iphone(kleur)
+randomNaam = Math.floor(randomNaam);
+    randomPaardNaam.textContent = randomNamen[randomNaam];
+}
+
+// hiermee wordt de bovenstaande functie daadwerkelijk uitgevoerd met een actie, 
+// wat ervoor zorgt dat er bij een klik op de knop een random naam komt te staan in de H1
+knopRandom.addEventListener("click",toonRandomPaardNaam,false);
 
 // hieronder zijn de variabelen voor de kleurenknoppen waarmee van kleur wordt veranderd
 var vachtkleur1 = document.querySelector(".vachtkleur1");
