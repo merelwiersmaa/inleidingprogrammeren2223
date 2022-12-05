@@ -36,6 +36,25 @@ randomNaam = Math.floor(randomNaam);
 // wat ervoor zorgt dat er bij een klik op de knop een random naam komt te staan in de H1
 knopRandom.addEventListener("click",toonRandomPaardNaam,false);
 
+// ik wil graag dat er een reactie komt op de de randomnizer met de juiste naam: Johny.
+// dus dat als er op de random naam knop wordt gedrukt, en de naam komt op Johny terecht,
+// dat de console dus de true statement toont (of false, in het geval dat er een 'verkeerde
+// naam staat).
+var Johny = randomNamen[0]; true; 
+
+function juisteNaam() {
+    if (Johny === randomNamen[0],true) {
+        console.log("Dat is de juiste naam!")
+    } else === (randomNamen){1, 2, 3, 4, 5, 6} {
+        console.log("Nee, raad maar door..")
+    }
+}
+
+juisteNaam();
+
+
+
+
 // hieronder zijn de variabelen voor de kleurenknoppen waarmee van kleur wordt veranderd
 var vachtkleur1 = document.querySelector(".vachtkleur1");
 
@@ -55,114 +74,3 @@ var uitrustingkleur2 = document.querySelector(".uitrustingkleur2");
 
 var uitrustingkleur3 = document.querySelector(".uitrustingkleur3");
 
-// hier beginnen de functies die zijn aangemaakt om de kleur te veranderen,
-// ze zijn allemaal hetzelfde, behalve dat de kleurnamen steeds veranderen
-
-// de variabele 'section', die gelinkt is aan de .section class in de html, 
-// krijgt via de classList de "achtergrondPaars" uit de CSS
-// dan zet ik op de variabele 'paars' (de button) een opdracht om bij een klik de bovenstaande functie aan te roepen,
-// de paarse button zorgt er dus voor dat de achtergrondkleur veranderd naar paars(zoals in de CSS)
-function achtergrondPaars() {
-    section.classList = ("achtergrondPaars");
-    kleurkeuze.src = "4e_sectie/paars.png";
-    }
-    paars.addEventListener("click", achtergrondPaars);
-
-// hier gebeurt hetzelfde als hierboven, alleen veranderd bij deze functie de image
-// het spreekt voorzich: bij een klik op de paarse button, veranderd de image van source en krijg je dus de paarse telefoon te zien
-    function kiespaars() {
-    
-    }
-    paars.addEventListener("click", kiespaars);
-
-// hier gebeurt nogsteeds hetzelfde, maar dan bij de h1 tekst
-// bij klik op de paarse button, veranderd de h1 van kleur(zoals beschreven in de CSS)
-    function headingPaars() {
-        heading.classList = ("headingPaars")
-        }
-        paars.addEventListener("click", headingPaars);
-
-// de functies voor alle andere kleuren hieronder zijn hetzelfde 
-
-function achtergrondGroen() {
-    section.classList = ("achtergrondGroen")
-    }
-    groen.addEventListener("click", achtergrondGroen);
-
-    function kiesgroen() {
-    kleurkeuze.src = "4e_sectie/groen.png"
-    }
-    groen.addEventListener("click", kiesgroen);
-
-    function headingGroen() {
-        heading.classList = ("headingGroen")
-        }
-        groen.addEventListener("click", headingGroen);
-
-function achtergrondBlauw() {
-    section.classList = ("achtergrondBlauw")
-    }
-    blauw.addEventListener("click", achtergrondBlauw);
-
-    function kiesblauw() {
-    kleurkeuze.src = "4e_sectie/blauw.png"
-    }
-    blauw.addEventListener("click", kiesblauw);
-
-    function headingBlauw() {
-        heading.classList = ("headingBlauw")
-        }
-        blauw.addEventListener("click", headingBlauw);
-
-function achtergrondRood() {
-    section.classList = ("achtergrondRood")
-    }
-    rood.addEventListener("click", achtergrondRood);
-    
-    function kiesrood() {
-    kleurkeuze.src = "4e_sectie/rood.png"
-    }
-    rood.addEventListener("click", kiesrood);
-
-    function headingRood() {
-        heading.classList = ("headingRood")
-        }
-        rood.addEventListener("click", headingRood);
-
-function achtergrondGoud() {
-    section.classList = ("achtergrondGoud")
-    }
-    goud.addEventListener("click", achtergrondGoud);
-    
-    function kiesgoud() {
-    kleurkeuze.src = "4e_sectie/goud.png"
-    }              
-    goud.addEventListener("click", kiesgoud);
-
-    function headingGoud() {
-        heading.classList = ("headingGoud")
-        }
-        goud.addEventListener("click", headingGoud);
-
-function achtergrondZwart() {
-    section.classList = ("achtergrondZwart")
-    }
-    zwart.addEventListener("click", achtergrondZwart);
-    
-    function kieszwart() {
-    kleurkeuze.src = "4e_sectie/zwart.png"
-    }
-    zwart.addEventListener("click", kieszwart);
-
-    function headingZwart() {
-        heading.classList = ("headingZwart")
-        }
-        zwart.addEventListener("click", headingZwart);
-
-
-// hier komt de functie om de watch te zien vanaf de zijkant
-
-// function zijkantfoto() {
-//     voorkantfoto.src = "watch_belowheader/WATCH2"
-//     }
-//     zijkant.addEventListener("click", zijkantfoto);
