@@ -8,11 +8,10 @@ hoeft te noemen, en dan haalt hij de gegeven kleur van de variable naar voren. A
 van de website, kan je dus in één keer alle knoppen (bijvoorbeeld) een ander kleur geven, door de variabele aan te passen
 dit scheelt dus werk en is overzichtelijker */
 :root {
-    --backgroundcolorNav: rgb(227, 84, 193);
-    --backgroundcolorMain: rgb(244, 218, 246);
-    --textcolorAtjes: rgb(0, 0, 0);
-    --textcolorNavjes: rgb(3, 3, 3);
+    --backgroundcolorNav: rgb(236, 169, 221);
+    --backgroundcolorMain: rgb(237, 230, 211);
     --textcolorZwart: rgb(0, 0, 0);
+    --donkereBijkleur: rgb(201, 85, 176);
 }
 *, html {
     margin: 0;
@@ -22,6 +21,14 @@ dit scheelt dus werk en is overzichtelijker */
 body {
       color: var(--textcolorZwart); 
       background-color: var(--backgroundcolorMain);
+}
+
+button {
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 main {
@@ -35,18 +42,12 @@ h1 {
 
 p {
     font-size: 2em;
-
-}
-
-button {
-    border: none;
-    cursor: pointer;
 }
 
 a {
     list-style: none;
     text-decoration: none;
-    color: var(--textcolorAtjes);
+    color: var(--textcolorZwart);
 }
 
 li {
@@ -113,17 +114,26 @@ nav.toonMenu ul {
 }
 
 .knopRandom {
+    border-style: double;
+    border-width: 1em;
+    border-color: var(--donkereBijkleur);
     background-color: var(--backgroundcolorMain);
-    border-radius: 60%;
+    border-radius: 50%;
     padding: 3em;
 }
+
+.knopRandom:hover {
+    transition: .4s;
+    background-color: var(--backgroundcolorNav);
+}
+
 
 /****************************************************************
 EERSTE SECTIE
 *****************************************************************/
 
 section {
-    padding-top: 3.5em;
+    padding-top: 5em;
     display: flex;
     align-items: center;
     justify-content: center;
