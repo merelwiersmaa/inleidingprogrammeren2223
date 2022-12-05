@@ -123,7 +123,7 @@ EERSTE SECTIE
 *****************************************************************/
 
 section {
-    padding-top: 8em;
+    padding-top: 3.5em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -132,14 +132,15 @@ section {
     
 /* ik wil dat de hover van de H1 BOVEN de content uitsteekt, dus niet dat alles verschuift 
 tijdens het hoveren */
+/* UPDATE - dit is me gelukt :DDD */
 h1 {
     font-size: 4em;
+    display: block;
+    z-index: 999;
 }
 
 
-h1:hover {
-    overflow:visible;
-    font-size: 5em;
+h1:hover { 
     transform:scale(1.5);
     transition-duration: .3s;
 }
