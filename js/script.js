@@ -1,8 +1,9 @@
 // hieronder worden de variabele aangemaakt voor de navigatie en de menuknop
 var button = document.querySelector(".hamburger");
 
-var nav = document.querySelector("nav")
+var nav = document.querySelector("nav");
 
+var logo = document.querySelector(".logo");
 // de fucntie 'togglemenu' wordt aangemaakt, en de nav variabele krijgt een actie toegewezen,
 // deze actie staat in de CSS als .toonMenu,
 // de 'button' variabele krijgt de actie toegewezen die ervoor zorgt dat de functie van het .toonMenu
@@ -14,22 +15,24 @@ function toggleMenu(event) {
 button.addEventListener("click", toggleMenu);
 
 //variable voor de button die de functie activeerd
-var knopRandom = document.querySelector(".knopRandom")
+var knopRandom = document.querySelector(".knopRandom");
 
 //hieronder de variabele voor de naam van het paard (de H1)
-var randomPaardNaam = document.querySelector(".headingPaardNaam")
+var randomPaardNaam = document.querySelector(".headingPaardNaam");
 
 //hieronder de keuzes waaruit de randomfunctie kan kiezen
-var randomNamen = ["Johny","Johnson","Jonathan","Johnsontje","John","Joey","Rowan"]
+var randomNamen = ["Johny","Johnson","Jonathan","Johnsontje","John","Joey","Rowan"];
+var randomNaam;
 
 //hieronder is de fucntie gemaakt die ervoor zorgt dat de H1 gemanipuleert wordt met random namen
 // en in de console.log wordt de hoeveelheid (length) van namen in de array getoond
 function toonRandomPaardNaam() {
-    var randomNaam = Math.random()* randomNamen.length ;
-console.log("namen",randomNamen.length)
+    randomNaam = Math.random()* randomNamen.length ;
+    console.log("namen",randomNamen.length)
 
-randomNaam = Math.floor(randomNaam);
+    var randomNaam = Math.floor(randomNaam);
     randomPaardNaam.textContent = randomNamen[randomNaam];
+    juisteNaam(randomNamen[randomNaam])
 }
 
 // hiermee wordt de bovenstaande functie daadwerkelijk uitgevoerd met een actie, 
@@ -40,17 +43,21 @@ knopRandom.addEventListener("click",toonRandomPaardNaam,false);
 // dus dat als er op de random naam knop wordt gedrukt, en de naam komt op Johny terecht,
 // dat de console dus de true statement toont (of false, in het geval dat er een 'verkeerde
 // naam staat).
-var Johny = randomNamen[0]; true; 
 
-function juisteNaam() {
-    if (Johny === randomNamen[0],true) {
-        console.log("Dat is de juiste naam!")
-    } else === (randomNamen){1, 2, 3, 4, 5, 6} {
+// LOGO MOET RONDDRAAIEN BIJ DE NAAM 'JOHNY'
+
+function juisteNaam(naam) {
+    console.log('@@--', naam)
+    if (naam == 'Johny'){
+        console.log("Dat is de juiste naam!");  
+    } else {
         console.log("Nee, raad maar door..")
     }
 }
 
-juisteNaam();
+
+
+
 
 
 
