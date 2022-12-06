@@ -81,3 +81,12 @@ var uitrustingkleur2 = document.querySelector(".uitrustingkleur2");
 
 var uitrustingkleur3 = document.querySelector(".uitrustingkleur3");
 
+// hieronder de afbeelding die wordt veranderd via de kleurenknoppen
+
+var paard = document.querySelector(".paard");
+
+function paardBruin() {
+    paard.src = "./images/paardVachtBruin.png";
+    }
+
+vachtkleur1.addEventListener("click", paardBruin);
