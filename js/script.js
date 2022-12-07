@@ -90,3 +90,15 @@ function paardBruin() {
     }
 
 vachtkleur1.addEventListener("click", paardBruin);
+
+function paardZwart() {
+    paard.src = "./images/paardVachtZwart.png";
+    }
+
+vachtkleur2.addEventListener("click", paardZwart);
+
+function paardVos() {
+    paard.src = "./images/paardVachtVos.png";
+    }
+
+vachtkleur3.addEventListener("click", paardVos);
