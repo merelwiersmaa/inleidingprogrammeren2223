@@ -73,15 +73,17 @@ header {
     padding-top: 1.3em;
 }
 
-.logo.animatie {
-    transform: rotate();
+.animatie {
+    transform:rotate(360deg);
+    transition: .4s;
+
 }
 
 nav {
     display: flex;
     flex-direction: row;
     justify-content:space-between;
-    padding: 1.5em;
+    padding: .5em;
 }
 
 nav > ul {
@@ -152,7 +154,7 @@ section {
 tijdens het hoveren */
 /* UPDATE - dit is me gelukt :DDD */
 h1 {
-    font-size: 4em;
+    font-size: 3em;
     display: block;
     z-index: 999;
 }

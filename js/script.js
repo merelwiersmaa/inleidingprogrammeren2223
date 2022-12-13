@@ -46,12 +46,18 @@ knopRandom.addEventListener("click",toonRandomPaardNaam,false);
 
 // LOGO MOET RONDDRAAIEN BIJ DE NAAM 'JOHNY'
 
+function animatie(event) {
+    logo.classList("animatie");
+}
+
 function juisteNaam(naam) {
     console.log('@@--', naam)
     if (naam == 'Johny'){
-        console.log("Dat is de juiste naam!");  
+        console.log("Dat is de juiste naam!"); 
+        logo.classList.add("animatie");
     } else {
         console.log("Nee, raad maar door..")
+        logo.classList.remove("animatie");
     }
 }
 
