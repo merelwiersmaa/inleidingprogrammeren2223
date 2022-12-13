@@ -81,7 +81,7 @@ var uitrustingkleur2 = document.querySelector(".uitrustingkleur2");
 
 var uitrustingkleur3 = document.querySelector(".uitrustingkleur3");
 
-// hieronder de afbeelding die wordt veranderd via de kleurenknoppen
+// hieronder de VACHT die wordt veranderd via de kleurenknoppen
 
 var paard = document.querySelector(".paard");
 
@@ -102,3 +102,45 @@ function paardVos() {
     }
 
 vachtkleur3.addEventListener("click", paardVos);
+
+
+
+//hieronder dezelfde vacht + manenkleur wordt veranderd
+
+function paardVosBlondeManen() {
+    paard.src = "./images/paardVosVachtBlondManen.png";
+    }
+
+manenkleur1.addEventListener("click", paardVosBlondeManen);
+
+function paardBruinZwarteManen() {
+    paard.src = "./images/paardBruinVachtZwartManen.png";
+    }
+
+manenkleur2.addEventListener("click", paardBruinZwarteManen);
+
+function paardZwartWitteManen() {
+    paard.src = "./images/paardZwartVachtWitManen.png";
+    }
+
+manenkleur3.addEventListener("click", paardZwartWitteManen);
+
+//hieronder dezelfde vacht & manenkleur + uitrusting wordt veranderd
+
+function paardVosBlondBlauweUitrusting() {
+    paard.src = "./images/paardVosBlondBlauweUitrusting.png";
+    }
+
+uitrustingkleur1.addEventListener("click", paardVosBlondBlauweUitrusting);
+
+function paardZwartWitPaarseUitrusting() {
+    paard.src = "./images/paardZwartWitPaarseUitrusting.png";
+    }
+
+uitrustingkleur2.addEventListener("click", paardZwartWitPaarseUitrusting);
+
+function paardBruinZwartGroeneUitrusting() {
+    paard.src = "./images/paardBruinZwartGroeneUitrusting.png";
+    }
+
+uitrustingkleur3.addEventListener("click", paardBruinZwartGroeneUitrusting);
