@@ -1,72 +1,26 @@
-// hieronder worden de variabele aangemaakt voor de navigatie en de menuknop
+///////////////////////////////////////////
+////////VARIABELEN VOOR DIT SCRIPT//////// 
+//////////////////////////////////////////
+
+// hieronder worden de variabele aangemaakt voor het hamburger-icoonknop, de nav (waarin de kleuren staan) en het logo.
 var button = document.querySelector(".hamburger");
 
 var nav = document.querySelector("nav");
 
 var logo = document.querySelector(".logo");
-// de fucntie 'togglemenu' wordt aangemaakt, en de nav variabele krijgt een actie toegewezen,
-// deze actie staat in de CSS als .toonMenu,
-// de 'button' variabele krijgt de actie toegewezen die ervoor zorgt dat de functie van het .toonMenu
-// wordt geactiveerd, dmv een click
 
-function toggleMenu(event) {
-    nav.classList.toggle("toonMenu");
-}
-button.addEventListener("click", toggleMenu);
-
-//variable voor de button die de functie activeerd
+//variable voor de randomknop die in de functie van random namen wordt gebruikt
 var knopRandom = document.querySelector(".knopRandom");
 
-//hieronder de variabele voor de naam van het paard (de H1)
+//hieronder de variabele voor de naam van het paard (de H1), deze wordt steeds aangepast bij het randomnizen
 var randomPaardNaam = document.querySelector(".headingPaardNaam");
 
-//hieronder de keuzes waaruit de randomfunctie kan kiezen
+//hieronder de keuzes waaruit de randomfunctie kan kiezen (deze komen dus steeds in de H1)
 var randomNamen = ["Johny","Johnson","Jonathan","Johnsontje","John","Joey","Rowan"];
 var randomNaam;
 
-//hieronder is de fucntie gemaakt die ervoor zorgt dat de H1 gemanipuleert wordt met random namen
-// en in de console.log wordt de hoeveelheid (length) van namen in de array getoond
-function toonRandomPaardNaam() {
-    randomNaam = Math.random()* randomNamen.length ;
-    console.log("namen",randomNamen.length)
-
-    var randomNaam = Math.floor(randomNaam);
-    randomPaardNaam.textContent = randomNamen[randomNaam];
-    juisteNaam(randomNamen[randomNaam])
-}
-
-// hiermee wordt de bovenstaande functie daadwerkelijk uitgevoerd met een actie, 
-// wat ervoor zorgt dat er bij een klik op de knop een random naam komt te staan in de H1
-knopRandom.addEventListener("click",toonRandomPaardNaam,false);
-
-// ik wil graag dat er een reactie komt op de de randomnizer met de juiste naam: Johny.
-// dus dat als er op de random naam knop wordt gedrukt, en de naam komt op Johny terecht,
-// dat de console dus de true statement toont (of false, in het geval dat er een 'verkeerde
-// naam staat).
-
-// LOGO MOET RONDDRAAIEN BIJ DE NAAM 'JOHNY'
-
-function animatie(event) {
-    logo.classList("animatie");
-}
-
-function juisteNaam(naam) {
-    console.log('@@--', naam)
-    if (naam == 'Johny'){
-        console.log("Dat is de juiste naam!"); 
-        logo.classList.add("animatie");
-    } else {
-        console.log("Nee, raad maar door..")
-        logo.classList.remove("animatie");
-    }
-}
-
-
-
-
-
-
-
+// hieronder het P element die gewijzigd wordt tijdens het randomizen
+var pElement = document.querySelector("p")
 
 // hieronder zijn de variabelen voor de kleurenknoppen waarmee van kleur wordt veranderd
 var vachtkleur1 = document.querySelector(".vachtkleur1");
@@ -87,8 +41,71 @@ var uitrustingkleur2 = document.querySelector(".uitrustingkleur2");
 
 var uitrustingkleur3 = document.querySelector(".uitrustingkleur3");
 
-// hieronder de VACHT die wordt veranderd via de kleurenknoppen
 
+//////////////////////////////////////
+////////// HAMBURGER MENU ///////////
+//////////////////////////////////////
+
+
+// de functie 'togglemenu' wordt aangemaakt, en de nav variabele krijgt een actie toegewezen:
+// deze actie staat in de CSS als .toonMenu,
+// de 'button' variabele krijgt de actie toegewezen die ervoor zorgt dat de functie van het .toonMenu
+// wordt geactiveerd, dmv een click
+function toggleMenu(event) {
+    nav.classList.toggle("toonMenu");
+}
+button.addEventListener("click", toggleMenu);
+
+
+/////////////////////////////////////////////////////////
+/////////// RANDOMIZER VAN NAMEN UIT DE ARRAY //////////
+////////////////////////////////////////////////////////
+
+
+//hieronder is de functie gemaakt die ervoor zorgt dat de H1 gemanipuleert wordt met random namen
+// en in de console.log wordt de hoeveelheid (length) van namen in de array getoond
+function toonRandomPaardNaam() {
+    randomNaam = Math.random()* randomNamen.length ;
+    console.log("namen",randomNamen.length)
+
+    var randomNaam = Math.floor(randomNaam);
+    randomPaardNaam.textContent = randomNamen[randomNaam];
+    juisteNaam(randomNamen[randomNaam])
+}
+
+// hiermee wordt de bovenstaande functie daadwerkelijk uitgevoerd met een actie, 
+// wat ervoor zorgt dat er bij een klik op de knop een random naam komt te staan in de H1
+knopRandom.addEventListener("click",toonRandomPaardNaam,false);
+
+
+/////////////////////////////////////////////////////////////////////////////
+////////// IF-ELSE STATEMENT MET CONSOLE LOG EN LOGO RONDDRAAIEN ////////////
+////////////////////////////////////////////////////////////////////////////
+
+
+// als via de random-knop 'johny' op de h1 tevoorschijn komt, zegt de console 'dat is de juiste naam!'
+// hierbij doet het logo rechtbovenin ook een rondje draaien, zie 'animatie'. deze actie wordt uit de css gehaald en hier geactiveerd
+// zo niet, dan zegt de console 'nee, raad maar door'
+function juisteNaam(naam) {
+    console.log('@@--', naam)
+    if (naam == 'Johny'){
+        console.log("Dat is de juiste naam!"); 
+        pElement.innerHTML = "Dat is de juiste naam!!";
+        logo.classList.add("animatie");
+    } else {
+        console.log("Nee, raad maar door..");
+        logo.classList.remove("animatie");
+        pElement.innerHTML = " ";
+    }
+}
+
+
+//////////////////////////////////////////////////
+////////// PAARD CUSTOMIZEN FUNCTIES ////////////
+/////////////////////////////////////////////////
+
+
+// hieronder de VACHT die wordt veranderd via de kleurenknoppen
 var paard = document.querySelector(".paard");
 
 function paardBruin() {
@@ -112,7 +129,6 @@ vachtkleur3.addEventListener("click", paardVos);
 
 
 //hieronder dezelfde vacht + manenkleur wordt veranderd
-
 function paardVosBlondeManen() {
     paard.src = "./images/paardVosVachtBlondManen.png";
     }
@@ -132,7 +148,6 @@ function paardZwartWitteManen() {
 manenkleur3.addEventListener("click", paardZwartWitteManen);
 
 //hieronder dezelfde vacht & manenkleur + uitrusting wordt veranderd
-
 function paardVosBlondBlauweUitrusting() {
     paard.src = "./images/paardVosBlondBlauweUitrusting.png";
     }

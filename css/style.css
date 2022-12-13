@@ -2,7 +2,6 @@
 ALGEMEEN
 *****************************************************************/
 
-
 /* hieronder zijn de variabelen aangemaakt met bijbehorende kleurencodes, zodat je bij meerdere elementen alleen de variable
 hoeft te noemen, en dan haalt hij de gegeven kleur van de variable naar voren. Als er dus een bepaalde aanpassing komt aan de huisstijl
 van de website, kan je dus in één keer alle knoppen (bijvoorbeeld) een ander kleur geven, door de variabele aan te passen
@@ -32,7 +31,7 @@ button:hover {
 }
 
 main {
-    padding-top: 5em;
+    padding-top: 4em;
 }
 
 h1 {
@@ -86,6 +85,10 @@ nav {
     padding: .5em;
 }
 
+/*********************************************
+HAMBURGER-UITSCHUIF-MENU
+**********************************************/
+
 nav > ul {
     background-color: var(--backgroundcolorNav);
     position: fixed;
@@ -114,14 +117,25 @@ nav > ul {
     background-color: transparent;
 }
 
+
+/***********************************
+FUNCTIEGEGEVENS HAMBURGERMENU
+************************************/
+
+
 nav.toonMenu ul {
     /* dit wordt gebruikt bij de functie toonMenu in javascript,
     het zorgt ervoor dat de navigatie in beeld schuift  
     
-    Voor de perfecte 'halve pagina menu voor de customizer: -65% !! */
+    Voor de perfecte 'stukje pagina menu voor de customizer: -80% !! */
     transform: translateX(-80%);
     transition: .4s;
 }
+
+/*********************
+KNOP VOOR RANDOMNIZER
+**********************/
+
 
 .knopRandom {
     border-style: double;
@@ -150,15 +164,12 @@ section {
     flex-direction: column;
 }
     
-/* ik wil dat de hover van de H1 BOVEN de content uitsteekt, dus niet dat alles verschuift 
-tijdens het hoveren */
-/* UPDATE - dit is me gelukt :DDD */
+/* h1 steekt via de z-index BOVEN de content uit, zodat alles op zn plek blijft tijdens het hoveren */
 h1 {
     font-size: 3em;
     display: block;
     z-index: 999;
 }
-
 
 h1:hover { 
     transform:scale(1.5);
