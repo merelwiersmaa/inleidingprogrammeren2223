@@ -41,6 +41,11 @@ var uitrustingkleur2 = document.querySelector(".uitrustingkleur2");
 
 var uitrustingkleur3 = document.querySelector(".uitrustingkleur3");
 
+//https://www.epidemicsound.com/sound-effects/
+var audioHinniken = new Audio("./sound/hinniken.mp3");
+
+//https://www.epidemicsound.com/sound-effects/
+var audioMuisKlik = new Audio("./sound/muisKlik.mp3");
 
 //////////////////////////////////////
 ////////// HAMBURGER MENU ///////////
@@ -53,6 +58,7 @@ var uitrustingkleur3 = document.querySelector(".uitrustingkleur3");
 // wordt geactiveerd, dmv een click
 function toggleMenu(event) {
     nav.classList.toggle("toonMenu");
+    audioMuisKlik.play();
 }
 button.addEventListener("click", toggleMenu);
 
@@ -71,6 +77,8 @@ function toonRandomPaardNaam() {
     var randomNaam = Math.floor(randomNaam);
     randomPaardNaam.textContent = randomNamen[randomNaam];
     juisteNaam(randomNamen[randomNaam])
+
+    audioMuisKlik.play();
 }
 
 // hiermee wordt de bovenstaande functie daadwerkelijk uitgevoerd met een actie, 
@@ -92,6 +100,7 @@ function juisteNaam(naam) {
         console.log("Dat is de juiste naam!"); 
         pElement.innerHTML = "Dat is de juiste naam!!";
         logo.classList.add("animatie");
+        audioHinniken.play();
     } else {
         console.log("Nee, raad maar door..");
         logo.classList.remove("animatie");
@@ -110,18 +119,21 @@ var paard = document.querySelector(".paard");
 
 function paardBruin() {
     paard.src = "./images/paardVachtBruin.png";
+    audioMuisKlik.play();
     }
 
 vachtkleur1.addEventListener("click", paardBruin);
 
 function paardZwart() {
     paard.src = "./images/paardVachtZwart.png";
+    audioMuisKlik.play();
     }
 
 vachtkleur2.addEventListener("click", paardZwart);
 
 function paardVos() {
     paard.src = "./images/paardVachtVos.png";
+    audioMuisKlik.play();
     }
 
 vachtkleur3.addEventListener("click", paardVos);
@@ -131,18 +143,21 @@ vachtkleur3.addEventListener("click", paardVos);
 //hieronder dezelfde vacht + manenkleur wordt veranderd
 function paardVosBlondeManen() {
     paard.src = "./images/paardVosVachtBlondManen.png";
+    audioMuisKlik.play();
     }
 
 manenkleur1.addEventListener("click", paardVosBlondeManen);
 
 function paardBruinZwarteManen() {
     paard.src = "./images/paardBruinVachtZwartManen.png";
+    audioMuisKlik.play();
     }
 
 manenkleur2.addEventListener("click", paardBruinZwarteManen);
 
 function paardZwartWitteManen() {
     paard.src = "./images/paardZwartVachtWitManen.png";
+    audioMuisKlik.play();
     }
 
 manenkleur3.addEventListener("click", paardZwartWitteManen);
@@ -150,18 +165,21 @@ manenkleur3.addEventListener("click", paardZwartWitteManen);
 //hieronder dezelfde vacht & manenkleur + uitrusting wordt veranderd
 function paardVosBlondBlauweUitrusting() {
     paard.src = "./images/paardVosBlondBlauweUitrusting.png";
+    audioMuisKlik.play();
     }
 
 uitrustingkleur1.addEventListener("click", paardVosBlondBlauweUitrusting);
 
 function paardZwartWitPaarseUitrusting() {
     paard.src = "./images/paardZwartWitPaarseUitrusting.png";
+    audioMuisKlik.play();
     }
 
 uitrustingkleur2.addEventListener("click", paardZwartWitPaarseUitrusting);
 
 function paardBruinZwartGroeneUitrusting() {
     paard.src = "./images/paardBruinZwartGroeneUitrusting.png";
+    audioMuisKlik.play();
     }
 
 uitrustingkleur3.addEventListener("click", paardBruinZwartGroeneUitrusting);
